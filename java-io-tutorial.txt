@@ -1,0 +1,28 @@
+InputStream
+
+InputStream is an abstract class, it can't be instantiated, it is a base class of all input streams.
+InputStream reads data one byte at a time.
+
+read() - this method reads the bytes one at a time and it will returns -1 if there are no more bytes.
+
+read(byte[] b) - this method reads the bytes then will store it in the byte[] array which is b.
+
+read(byte[] b,int off, int len) - this method also do same job, but it will writes value to byte[] array according to off and len parameter
+off - this is starting position of byte[] array
+len - how many bytes do it read into byte[] array
+
+For example:
+inputStream.read(b, 2, 3);
+off - 2 (starting position)
+len - 3 (how many bytes do it read into byte[] array)
+0 0 49 50 51 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+readAllBytes() - this method reads all of bytes in the file, it is faster than other read method, it returns byte[] array
+
+Other methods
+available()
+mark()
+reset()
+skip()
+transferTo()
