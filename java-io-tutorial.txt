@@ -29,3 +29,11 @@ this is the result after skipping 3 elements:   52 53 54 55 55 56 56 57 48 97 49
 
 
 skipNBytes(int n) - this method does same job as skip(int n)  but it won't return anything this method type is void
+
+
+
+
+OutputStream
+
+write(int n)
+write(byte[] b) - this is faster than write(int n)
