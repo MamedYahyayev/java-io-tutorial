@@ -20,4 +20,11 @@ public final class Utility {
             System.out.print(value + " ");
         }
     }
+
+    public static void printActualValues(byte[] b) {
+        for (byte value : b) {
+            System.out.print((char) value + "");
+        }
+    }
+
 }

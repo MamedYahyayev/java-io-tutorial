@@ -20,9 +20,12 @@ len - 3 (how many bytes do it read into byte[] array)
 
 readAllBytes() - this method reads all of bytes in the file, it is faster than other read method, it returns byte[] array
 
-Other methods
-available()
-mark()
-reset()
-skip()
-transferTo()
+available() - Returns an estimate of the number of bytes that can be read
+
+skip(int n) - this method skip the number of bytes, it will return long value which is the skipped bytes number
+For example,
+this is the result before skipping:             49 50 51 52 53 54 55 55 56 56 57 48 97 49 50 51 52 50 49 33
+this is the result after skipping 3 elements:   52 53 54 55 55 56 56 57 48 97 49 50 51 52 50 49 33
+
+
+skipNBytes(int n) - this method does same job as skip(int n)  but it won't return anything this method type is void

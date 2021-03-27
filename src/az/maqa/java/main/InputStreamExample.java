@@ -1,5 +1,6 @@
 package az.maqa.java.main;
 
+import az.maqa.java.util.Utility;
 import static az.maqa.java.util.Utility.printByteArray;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -15,7 +16,7 @@ public class InputStreamExample {
     public static void main(String[] args) {
         try (InputStream inputStream = new FileInputStream("test.txt")) {
 
-            inputStreamReadAllBytes(inputStream);
+            inputStreamPrintActualValues(inputStream);
 
         } catch (FileNotFoundException ex) {
             System.out.println("File not found Exception!!!");
@@ -56,4 +57,38 @@ public class InputStreamExample {
         printByteArray(b);
     }
 
+    // ----------------- skip(int n) --------------------- //
+    public static void inputStreamSkip(InputStream inputStream) throws IOException {
+        byte[] b = null;
+        long skippedBytes = inputStream.skip(3);
+        b = inputStream.readAllBytes();
+        System.out.println("Skipped Bytes: " + skippedBytes);
+        printByteArray(b);
+    }
+
+    // ----------------- skipNBytes(int n) --------------------- //
+    public static void inputStreamSkipNBytes(InputStream inputStream) throws IOException {
+        byte[] b = null;
+        inputStream.skipNBytes(3);
+        b = inputStream.readAllBytes();
+        printByteArray(b);
+    }
+
+    public static void inputStreamReadBytesConvertToActualValue(InputStream inputStream) throws IOException {
+        int read = 0;
+        String message = "";
+        while ((read = inputStream.read()) != -1) {
+            char element = (char) read;
+            message += element;
+        }
+
+        System.out.println("Message from file: " + message);
+    }
+    
+    public static void inputStreamPrintActualValues(InputStream inputStream) throws IOException {
+        byte[] b = new byte[inputStream.available()];
+        int read = inputStream.read(b);
+        System.out.println("How many bytes to read: " + read);
+        Utility.printActualValues(b);
+    }
 }
