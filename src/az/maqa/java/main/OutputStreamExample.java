@@ -13,11 +13,9 @@ public class OutputStreamExample {
 
     public static void main(String[] args) {
         try (OutputStream outputStream = new FileOutputStream("write-test.txt")) {
-
             byte[] b = {33, 44, 55, 66, 77, 88, 99, 33, 44, 55, 66, 77, 88, 99, 33, 44, 55, 66, 77, 88, 99};
             writeBytesArrayToFile(outputStream, b);
             outputStream.flush();
-
         } catch (FileNotFoundException ex) {
             System.out.println("File not found Exception!!!");
             ex.printStackTrace();

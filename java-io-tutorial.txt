@@ -37,3 +37,7 @@ OutputStream
 
 write(int n)
 write(byte[] b) - this is faster than write(int n)
+flush()
+When you write data to a stream, it is not written immediately, and it is buffered. 
+So use flush() when you need to be sure that all your data from buffer is written.
+We need to be sure that all the writes are completed before we close the stream, and that is why flush() is called in file
