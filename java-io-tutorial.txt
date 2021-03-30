@@ -41,3 +41,9 @@ flush()
 When you write data to a stream, it is not written immediately, and it is buffered. 
 So use flush() when you need to be sure that all your data from buffer is written.
 We need to be sure that all the writes are completed before we close the stream, and that is why flush() is called in file
+
+
+FileInputStream
+
+FileInputStream fileInputStream = new FileInputStream(); we have to pass argument to its constructor
+We can pass String object, or object of File class or FileDescriptor object
