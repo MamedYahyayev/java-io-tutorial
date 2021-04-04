@@ -35,8 +35,10 @@ skipNBytes(int n) - this method does same job as skip(int n)  but it won't retur
 
 OutputStream
 
+Performance for writing
 write(int n)
 write(byte[] b) - this is faster than write(int n)
+
 flush()
 When you write data to a stream, it is not written immediately, and it is buffered. 
 So use flush() when you need to be sure that all your data from buffer is written.
@@ -47,3 +49,17 @@ FileInputStream
 
 FileInputStream fileInputStream = new FileInputStream(); we have to pass argument to its constructor
 We can pass String object, or object of File class or FileDescriptor object
+
+Performance for reading
+read()
+read(byte[] b) - this is faster than above
+
+FileOutputStream
+
+FileOutputStream out = new FileOutputStream(); - we have to pass argument to its constructor
+We can pass String object, or object of File class or FileDescriptor object
+It has same methods as OutputStream.
+
+Performance for writing
+write(int n)
+write(byte[] b) - this is faster than above
