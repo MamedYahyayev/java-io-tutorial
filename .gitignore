@@ -4,6 +4,9 @@
 # Build XML file
 build.xml
 
+# Test files
+*test.txt
+
 # Manifest File
 *.mf
 
