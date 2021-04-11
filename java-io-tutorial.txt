@@ -63,3 +63,25 @@ It has same methods as OutputStream.
 Performance for writing
 write(int n)
 write(byte[] b) - this is faster than above
+
+RandomAccessFile
+
+This class takes 2 argument on the constructor, the first one is file path or file name, the second one is access modes
+Here are all access modes in RandomAccessFile
+r - read mode
+rw - read and write mode
+rwd - read and write mode - synchronously.
+rws - read and write mode - synchronously.
+
+seek(int n) - this method allow to start from specific position for reading or writing
+for instance,
+file.seek(100); - it will start from position 100
+
+
+getFilePosition() - this will return current position of file   
+
+file.seek(10);
+file.getFilePosition(); - it will return 10 becuase of seek() method
+
+
+read() and write() method are the same in other io classes.
