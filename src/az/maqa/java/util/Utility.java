@@ -5,6 +5,8 @@
  */
 package az.maqa.java.util;
 
+import java.io.File;
+
 /**
  *
  * @author mamedyahyayev
@@ -27,4 +29,7 @@ public final class Utility {
         }
     }
 
+    public static boolean checkValueIsNotNull(String value) {
+        return value != null && !value.isEmpty();
+    }
 }

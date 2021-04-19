@@ -85,3 +85,15 @@ file.getFilePosition(); - it will return 10 becuase of seek() method
 
 
 read() and write() method are the same in other io classes.
+
+
+File class and its methods
+file.createNewFile() - to creat new file
+file.exists() - check file exist or not
+file.mkdir() - create directory
+file.mkdirs() - create multiple directory
+file.length() - return file length
+file.renameTo(new File(destination)) - rename or move file from one place to another
+file.delete() - delete file
+file.isDirectory() - check file is directory or not
+directory.list() - returns list of file which placed in the current directory

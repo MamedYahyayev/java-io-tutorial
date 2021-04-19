@@ -4,6 +4,9 @@
 # Build XML file
 build.xml
 
+# Includes test keyword
+*test*
+
 # Test files
 *test.txt
 
